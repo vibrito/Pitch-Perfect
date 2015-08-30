@@ -28,14 +28,12 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate
     {
         buttonStop.hidden = true
         buttonRecord.enabled = true
-        labelTapToRecord.hidden = false
+        labelRecordingInProgress.text = "Tap to record"
     }
 
     @IBAction func actionRecordAudio(sender: UIButton)
     {
-        println("in recordAudio")
-        labelRecordingInProgress.hidden = false
-        labelTapToRecord.hidden = true
+        labelRecordingInProgress.text = "recording"
         buttonStop.hidden = false
         buttonRecord.enabled = false
         
@@ -58,8 +56,8 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate
     
     @IBAction func actionStopRecord(sender: UIButton)
     {
-        labelRecordingInProgress.hidden = true
         buttonStop.hidden = true
+        labelRecordingInProgress.text = "Tap to record"
         
         audioRecorder.stop()
         var audioSession = AVAudioSession.sharedInstance()
@@ -71,7 +69,7 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate
         if(flag)
         {
             recordedAudio = RecordedAudio(url: recorder.url, string: recorder.url.lastPathComponent!)
-            self.performSegueWithIdentifier("stopRecording", sender: recordedAudio)
+            performSegueWithIdentifier("stopRecording", sender: recordedAudio)
         }
         else
         {
@@ -89,11 +87,6 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate
             let data = sender as! RecordedAudio
             playSoundsVC.receivedAudio = data
         }
-    }
-    
-    override func didReceiveMemoryWarning()
-    {
-        super.didReceiveMemoryWarning()
     }
 }
 

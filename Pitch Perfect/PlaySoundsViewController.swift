@@ -88,9 +88,4 @@ class PlaySoundsViewController: UIViewController
         audioEngine.stop()
         audioEngine.reset()
     }
-    
-    override func didReceiveMemoryWarning()
-    {
-        super.didReceiveMemoryWarning()
-    }
 }

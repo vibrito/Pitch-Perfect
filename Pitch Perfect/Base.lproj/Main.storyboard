@@ -27,7 +27,7 @@
                                     <action selector="actionRecordAudio:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="oRB-Ph-9iT"/>
                                 </connections>
                             </button>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="recording" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zwY-z9-mKm">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap to record" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zwY-z9-mKm">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="14"/>
                                 <color key="textColor" red="0.14509803921568626" green="0.28235294117647058" blue="0.43137254901960786" alpha="1" colorSpace="calibratedRGB"/>
@@ -42,12 +42,6 @@
                                     <action selector="actionStopRecord:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="yXZ-si-T2J"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap to Record" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nsJ-3P-WNk">
-                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -55,24 +49,17 @@
                             <constraint firstItem="X6q-BV-xcu" firstAttribute="centerX" secondItem="zwY-z9-mKm" secondAttribute="centerX" constant="-0.5" id="EIO-wn-XYy"/>
                             <constraint firstAttribute="centerX" secondItem="zwY-z9-mKm" secondAttribute="centerX" constant="-0.5" id="Gj7-Da-hfr"/>
                             <constraint firstAttribute="centerY" secondItem="guF-RV-nPG" secondAttribute="centerY" id="Ldm-7Q-wzM"/>
-                            <constraint firstAttribute="centerX" secondItem="nsJ-3P-WNk" secondAttribute="centerX" id="OSq-gQ-oYe"/>
                             <constraint firstItem="zwY-z9-mKm" firstAttribute="top" secondItem="guF-RV-nPG" secondAttribute="bottom" constant="8" id="RXt-le-w1X"/>
-                            <constraint firstAttribute="centerY" secondItem="nsJ-3P-WNk" secondAttribute="centerY" constant="-95.5" id="UbA-Ie-H6W"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="X6q-BV-xcu" secondAttribute="bottom" constant="20" id="amv-Zy-a6U"/>
-                            <constraint firstItem="nsJ-3P-WNk" firstAttribute="top" secondItem="zwY-z9-mKm" secondAttribute="bottom" constant="13" id="gDR-Ac-g1A"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="guF-RV-nPG"/>
                                 <exclude reference="zwY-z9-mKm"/>
                                 <exclude reference="X6q-BV-xcu"/>
-                                <exclude reference="nsJ-3P-WNk"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="amv-Zy-a6U"/>
-                                <exclude reference="OSq-gQ-oYe"/>
-                                <exclude reference="UbA-Ie-H6W"/>
-                                <exclude reference="gDR-Ac-g1A"/>
                                 <exclude reference="Gj7-Da-hfr"/>
                                 <exclude reference="RXt-le-w1X"/>
                                 <exclude reference="EIO-wn-XYy"/>
@@ -85,13 +72,9 @@
                                 <include reference="guF-RV-nPG"/>
                                 <include reference="zwY-z9-mKm"/>
                                 <include reference="X6q-BV-xcu"/>
-                                <include reference="nsJ-3P-WNk"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="amv-Zy-a6U"/>
-                                <include reference="OSq-gQ-oYe"/>
-                                <include reference="UbA-Ie-H6W"/>
-                                <include reference="gDR-Ac-g1A"/>
                                 <include reference="Gj7-Da-hfr"/>
                                 <include reference="RXt-le-w1X"/>
                                 <include reference="EIO-wn-XYy"/>
@@ -105,7 +88,6 @@
                         <outlet property="buttonRecord" destination="guF-RV-nPG" id="5K8-7Y-rLs"/>
                         <outlet property="buttonStop" destination="X6q-BV-xcu" id="MEz-Yj-OYP"/>
                         <outlet property="labelRecordingInProgress" destination="zwY-z9-mKm" id="CJj-kX-Law"/>
-                        <outlet property="labelTapToRecord" destination="nsJ-3P-WNk" id="u7B-xP-fhA"/>
                         <segue destination="Xhz-QL-5w0" kind="show" identifier="stopRecording" id="piM-29-tdI"/>
                     </connections>
                 </viewController>
